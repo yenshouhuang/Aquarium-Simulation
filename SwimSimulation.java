@@ -48,10 +48,10 @@ public class SwimSimulation {
                     String line = input.nextLine(); 
                     lineCompon = line.split(":");
 
-                    if (lineCompon == null || lineCompon[0] == null || lineCompon[0].trim().equals("")) {
+                    if (lineCompon == null || lineCompon[0] == null || "".equals(lineCompon[0].trim())) {
                         continue;
                     } else {
-                        if (lineCompon[0].trim().toUpperCase().equals("FISH") || lineCompon[0].trim().toUpperCase().equals("FOOD") || lineCompon[0].trim().toUpperCase().equals("HOOK"))
+                        if ("FISH".equals(lineCompon[0].trim().toUpperCase()) || "FOOD".equals(lineCompon[0].trim().toUpperCase()) || "HOOK".equals(lineCompon[0].trim().toUpperCase()))
                         ;
                         else {
                             System.out.println("WARNING: Missing specification for the number and initial positions of fishes, foods, or hook.");
@@ -59,13 +59,13 @@ public class SwimSimulation {
                         }
                         int objectNo = Integer.parseInt(lineCompon[1].trim());
                         int objectType = 0;
-                        if (lineCompon[0].trim().toUpperCase().equals("FISH")) {
+                        if ("FISH".equals(lineCompon[0].trim().toUpperCase())) {
 
                             objectType = 1;
-                        } else if (lineCompon[0].trim().toUpperCase().equals("FOOD")) {
+                        } else if ("FOOD".equals(lineCompon[0].trim().toUpperCase())) {
 
                             objectType = 2;
-                        } else if (lineCompon[0].trim().toUpperCase().equals("HOOK")) {
+                        } else if ("HOOK".equals(lineCompon[0].trim().toUpperCase())) {
 
                             objectType = 3;
                         }
@@ -74,7 +74,7 @@ public class SwimSimulation {
                         String[] posi_XY = null;
                         while (input.hasNext() && ((!(((posi_XY = (input.nextLine().split(",")))[0]).trim().toUpperCase().contains("FISH")))) &
                             (!posi_XY[0].trim().toUpperCase().contains("FOOD")) & (!posi_XY[0].trim().toUpperCase().contains("HOOK"))) {
-                            if (posi_XY[0] == null || posi_XY[0].trim().equals(""))
+                            if (posi_XY[0] == null || "".equals(posi_XY[0].trim()))
                             ;
                             else {
 
@@ -113,13 +113,13 @@ public class SwimSimulation {
 
                         objectNo = Integer.parseInt(lineCompon[1].trim());
 
-                        if (lineCompon[0].trim().toUpperCase().equals("FISH")) {
+                        if ("FISH".equals(lineCompon[0].trim().toUpperCase())) {
 
                             objectType = 1;
-                        } else if (lineCompon[0].trim().toUpperCase().equals("FOOD")) {
+                        } else if ("FOOD".equals(lineCompon[0].trim().toUpperCase())) {
 
                             objectType = 2;
-                        } else if (lineCompon[0].trim().toUpperCase().equals("HOOK")) {
+                        } else if ("HOOK".equals(lineCompon[0].trim().toUpperCase())) {
 
                             objectType = 3;
                         }
@@ -129,7 +129,7 @@ public class SwimSimulation {
                         posi_XY = null;
                         while (input.hasNext() && !(((posi_XY = (input.nextLine().split(",")))[0]).trim().toUpperCase().contains("FISH")) &
                             !posi_XY[0].trim().toUpperCase().contains("FOOD") & !posi_XY[0].trim().toUpperCase().contains("HOOK")) {
-                            if (posi_XY[0].trim().equals(""))
+                            if ("".equals(posi_XY[0].trim()))
                             ;
                             else {
 
@@ -166,11 +166,11 @@ public class SwimSimulation {
 
                         lineCompon = posi_XY[0].split(":");
                         objectNo = Integer.parseInt(lineCompon[1].trim());
-                        if (lineCompon[0].trim().toUpperCase().equals("FISH")) {
+                        if ("FISH".equals(lineCompon[0].trim().toUpperCase())) {
                             objectType = 1;
-                        } else if (lineCompon[0].trim().toUpperCase().equals("FOOD")) {
+                        } else if ("FOOD".equals(lineCompon[0].trim().toUpperCase())) {
                             objectType = 2;
-                        } else if (lineCompon[0].trim().toUpperCase().equals("HOOK")) {
+                        } else if ("HOOK".equals(lineCompon[0].trim().toUpperCase())) {
                             objectType = 3;
                         }
 
@@ -180,7 +180,7 @@ public class SwimSimulation {
                         while (input.hasNext()) {
                             String posi_Line = input.nextLine();
                             posi_XY = posi_Line.split(",");
-                            if (posi_XY[0].trim().equals(""))
+                            if ("".equals(posi_XY[0].trim()))
                             ;
                             else {
                                 int x = Integer.parseInt(posi_XY[0].trim());
