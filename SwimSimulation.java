@@ -52,7 +52,9 @@ public class SwimSimulation {
                         continue;
                     } else {
                         if (lineCompon[0].trim().toUpperCase().equals("FISH") || lineCompon[0].trim().toUpperCase().equals("FOOD") || lineCompon[0].trim().toUpperCase().equals("HOOK"))
-                        ;
+                        {
+                            ;
+                        }
                         else {
                             System.out.println("WARNING: Missing specification for the number and initial positions of fishes, foods, or hook.");
                             return false;
